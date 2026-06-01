@@ -64,7 +64,7 @@
       date.textContent = formattedDate;
     }
 
-    functionRandomGreeting {
+    function randomGreeting() {
       const greetings = {
         "miku dayo",
         "Fine evening innit luv",
@@ -77,7 +77,8 @@
         document.getElementById('randomgreeting').value = randomGreeting;
       }
     }
-
+    
+    randomGreeting();
     getDateAndTime();
     setInterval(getDateAndTime, 1000);
   </script>

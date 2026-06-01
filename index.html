@@ -36,13 +36,13 @@
     
     function getDateAndTime() {
       let now = new Date();
-      let hours = formatTime(now.getHours());
+      let hours = now.getHours();
       let minutes = String(formatTime(now.getMinutes()));
       let seconds = String(formatTime(now.getSeconds()));
 
       if (hours >= 12) {
         hours = hours - 12
-        hours = String(hours);
+        hours = String(formatTime(hours));
       }
       
       const timeString = `${hours}:${minutes}:${seconds}`

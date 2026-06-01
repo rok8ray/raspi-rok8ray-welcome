@@ -36,11 +36,11 @@
     
     function getDateAndTime() {
       let now = new Date();
-      let hours = formatTime(now.getHours());
-      let minutes = formatTime(now.getMinutes());
-      let seconds = formatTime(now.getSeconds());
+      let hours = String(formatTime(now.getHours()));
+      let minutes = String(formatTime(now.getMinutes()));
+      let seconds = formatTime((now.getSeconds()));
 
-      const timeString = "${hours}:${minutes}:${seconds}"
+      const timeString = `${hours}:${minutes}:${seconds}`
 
       time.textContent = timeString
     }

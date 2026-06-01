@@ -40,7 +40,7 @@
       let minutes = String(formatTime(now.getMinutes()));
       let seconds = String(formatTime(now.getSeconds()));
 
-      if (hours >= 12) {
+      if (hours > 12) {
         hours = hours - 12
         hours = String(formatTime(hours));
       }

@@ -71,11 +71,9 @@
         "enrique",
         "welcome to the underground",
       ];
-
-      function pickRandom() {
-        let randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
-        document.getElementById('randomgreeting').textContent = randomGreeting;
-      }
+      
+      let randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
+      document.getElementById('randomgreeting').textContent = randomGreeting;
     }
     
     randomGreeting();

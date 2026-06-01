@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
       body {
-        background-color: gray;
+        background-color: rgb(48, 48, 48);
         color: white;
         text-align: center;
         font-family: "Noto Sans";
@@ -16,12 +16,36 @@
       	font-size: 100px;
       }
       p {
-      	font-size: 25px;
+      	font-size: 15px;
       }
     </style>
   </head>
   <body>
     <h1>Hello, Rayyan</h1>
-    <p>Fine evening innit luv</p>
+    <p id="randomgreeting">Fine evening innit luv</p>
+    <p id="date">Date</p>
+    <p id="time">Time</p>
   </body>
+  <script>
+    const date = document.getElementById("date");
+    const time = document.getElementById("time");
+    
+    function formatTime(number) {
+      return number < 10 ? '0' + number : number;
+    }
+    
+    function getDateAndTime() {
+      let now = new Date();
+      let hours = formatTime(now.getHours());
+      let minutes = formatTime(now.getMinutes());
+      let seconds = formatTime(now.getSeconds());
+
+      const timeString = "${hours}:${minutes}:${seconds}"
+
+      time.textContent = timeString
+    }
+
+    updateClock();
+    setInterval(updateClock, 1000);
+  </script>
 </html>

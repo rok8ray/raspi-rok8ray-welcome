@@ -16,7 +16,7 @@
       	font-size: 100px;
       }
       p {
-      	font-size: 15px;
+      	font-size: 20px;
       }
     </style>
   </head>
@@ -36,10 +36,15 @@
     
     function getDateAndTime() {
       let now = new Date();
-      let hours = String(formatTime(now.getHours()));
+      let hours = formatTime(now.getHours()));
       let minutes = String(formatTime(now.getMinutes()));
-      let seconds = formatTime((now.getSeconds()));
+      let seconds = String(formatTime(now.getSeconds()));
 
+      if (hours >= 12) {
+        hours = hours - 12
+        hours = String(hours);
+      }
+      
       const timeString = `${hours}:${minutes}:${seconds}`
 
       time.textContent = timeString
